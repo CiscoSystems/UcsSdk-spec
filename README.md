@@ -5,6 +5,7 @@ Temporary home for a spec file for UcsSdk.
 Build
 ------
 Clone this repo, and cd into that directory
+
 run  `./build-rpm.sh`
 
 TODO
