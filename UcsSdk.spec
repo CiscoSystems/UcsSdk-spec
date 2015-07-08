@@ -12,7 +12,7 @@ Source0:        https://pypi.python.org/packages/source/U/UcsSdk/UcsSdk-%{versio
 
 BuildArch:      noarch
 
-BuildRequires:	python-setuptools
+BuildRequires:  python-setuptools
 
 %description
 Python development kit for Cisco UCS
