@@ -10,7 +10,7 @@ mkdir -p ${BUILD_DIR}/{BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 curl -o ${BUILD_DIR}/SOURCES/UcsSdk-${VERSION}.tar.gz https://pypi.python.org/packages/source/U/UcsSdk/UcsSdk-${VERSION}.tar.gz
 
 cp ${DIST_DIR}/*.spec ${BUILD_DIR}/SPECS/
-sed -i -e "s/Version:.*/Version: $VERSION/g" *.spec
+sed -i -e "s/Version:.*/Version:        $VERSION/g" *.spec
 
 rsync -rlpt --exclude ".git*" --exclude "*.spec" --exclude "build-rpm.sh" ${DIST_DIR}/ ${BUILD_DIR}/SOURCES/
 
