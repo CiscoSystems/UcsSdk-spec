@@ -1,6 +1,9 @@
 #!/bin/bash
 
+set -e
+
 DIST_DIR=.
+mkdir -p ~/rpmbuild
 BUILD_DIR=$(cd ~/rpmbuild/ && pwd)
 VERSION=0.8.2.2
 
