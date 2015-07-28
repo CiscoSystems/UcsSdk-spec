@@ -5,12 +5,13 @@ set -e
 DIST_DIR=.
 mkdir -p ~/rpmbuild
 BUILD_DIR=$(cd ~/rpmbuild/ && pwd)
-VERSION=0.8.2.2
+VERSION=0.8.2.4
 
 rm -rf ${BUILD_DIR}/*
 mkdir -p ${BUILD_DIR}/{BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 
 curl -o ${BUILD_DIR}/SOURCES/UcsSdk-${VERSION}.tar.gz https://pypi.python.org/packages/source/U/UcsSdk/UcsSdk-${VERSION}.tar.gz
+# cp ../UcsPythonSDK/dist/*.tar.gz ${BUILD_DIR}/SOURCES/
 
 cp ${DIST_DIR}/*.spec ${BUILD_DIR}/SPECS/
 sed -i -e "s/Version:.*/Version:        $VERSION/g" *.spec
